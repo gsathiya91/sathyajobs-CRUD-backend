@@ -4,7 +4,7 @@ dbConnect();
 async function dbConnect() {
   try {
     await mongoose.connect(
-        `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@cluster0.ktemn.mongodb.net/SATHIYAJOBS?retryWrites=true&w=majority`,
+        `mongodb+srv://Gsathiya:capstoneproject@cluster0.ktemn.mongodb.net/SATHIYAJOBS?retryWrites=true&w=majority`,
       { useNewUrlParser: true }
     );
     console.log("MongoDb connected successfully");

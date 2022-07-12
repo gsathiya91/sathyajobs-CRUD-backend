@@ -12,6 +12,7 @@ router.post("/register", async (req, res) => {
   } catch (error) {
     return res.status(400).json(error);
   }
+  
 });
 
 router.post("/login", async (req, res) => {
@@ -20,7 +21,9 @@ router.post("/login", async (req, res) => {
       username: req.body.username,
       password: req.body.password,
     });
-
+    if(!user){
+      res.send("Not a registered user")
+   }
     if (user) {
       res.send(user);
     } else {
